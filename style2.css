@@ -1,0 +1,131 @@
+
+/*Formato del cuerpo de la pagina (fondo)*/
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #18033a;
+}
+
+/*Formato del formulario*/
+form {
+    display: inline-block;
+    width: 500px;
+    text-align: left;
+    padding: 20px;
+    border: 2px solid rgb(10, 7, 207);
+    border-radius: 10px;
+    background-color: #18033a;
+}
+
+/*Formato de Create account*/
+h1 {
+    font-weight: bold;
+    font-size:xx-large;
+    text-align: center;
+    color: rgb(130, 179, 196);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/*Formato de texto Nombre, email...*/
+label {
+    font-weight: bold;
+    font-size: medium;
+    margin-top: 10px;
+    display: block;
+    color: rgb(230, 235, 241);
+}
+
+/*Formato de cajas Nombre, email...*/
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+/*Formato de boton enviar; añadir hover al boton*/
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #3918f1;
+}
+
+
+/*Validación: recuadros en verde/rojo; texto mensaje error e iconos bien y mal*/
+input[type="text"]:valid {
+    border: 2px solid green;
+}
+
+input[type="text"]:invalid {
+    border: 2px solid red;
+}
+
+input[type="email"]:valid {
+    border: 2px solid green;
+}
+
+input[type="email"]:invalid {
+    border: 2px solid red;
+}
+
+input[type="password"]:valid {
+    border: 2px solid green;
+}
+
+input[type="password"]:invalid {
+    border: 2px solid red;
+}
+
+.error-name {
+    color: red;
+    font-weight: bold;
+    font-size: small;
+    margin-top: 5px;
+}
+
+.error-email {
+    color: red;
+    font-weight: bold;
+    font-size: small;
+    margin-top: 5px;
+}
+
+.error-password {
+    color: red;
+    font-weight: bold;
+    font-size: small;
+    margin-top: 5px;
+}
+
+.error-confirm_password {
+    color: red;
+    font-weight: bold;
+    font-size: small;
+    margin-top: 5px;
+}
+
+#rojo-icon-name,
+#verde-icon-name,
+#rojo-icon-email,
+#verde-icon-email, 
+#rojo-icon-password,
+#verde-icon-password, 
+#rojo-icon-confirm_password,
+#verde-icon-confirm_password {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}

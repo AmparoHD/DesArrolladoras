@@ -1,0 +1,56 @@
+<!-- Proyecto de Laboratorio de Amparo Herrera Dueñas-->
+
+<!DOCTYPE html>
+    <!-- Head: incluir charset para poder escribir amplia variedad de caracteres y ruta a la hoja de estilos -->
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style2.css">
+    </head>
+
+    <!-- Definir formulario y llamada a la funcion para ocultar los iconos cuando se recargue la página -->
+    <body onload="hideIcons()">
+        <form id="myForm">
+            <!-- Formulario con titulo, campo de texto para nombre, email, contraseña y confirmación de contraseña; y boton de enviar -->
+            <h1>Create Account</h1>
+
+            <!-- Nombre: sólo debe aceptar letras (mejor que lo indique), poner limitacion de longitud para que sea entre 2 y 60 caracteres-->
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="user_name" pattern="[A-Za-z]{2,60}" placeholder="Solo caracteres alfabéticos">
+            <div id="name-error" class="error-name"></div>
+            <img id="rojo-icon-name" src="imagenes/rojo-icon.png" alt="Icono de verificación">
+            <img id="verde-icon-name" src="imagenes/verde-icon.png" alt="Icono de verificación">
+            <br><br>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="user_email">
+            <div id="email-error" class="error-email"></div>
+            <img id="rojo-icon-email" src="imagenes/rojo-icon.png" alt="Icono de verificación">
+            <img id="verde-icon-email" src="imagenes/verde-icon.png" alt="Icono de verificación">
+            <br><br>
+
+            <!-- Contraseña: sólo debe aceptar letras y numeros, y de 4 a 8 caracteres (mejor que lo indique en la caja) -->
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="user_password" pattern="[A-Za-z0-9]{4,8}" placeholder="Entre 4 y 8 caracteres">
+            <div id="password-error" class="error-password"></div>
+            <img id="rojo-icon-password" src="imagenes/rojo-icon.png" alt="Icono de verificación">
+            <img id="verde-icon-password" src="imagenes/verde-icon.png" alt="Icono de verificación">
+            <br><br>
+
+            <!-- Confirmar contraseña: mismas restricciones que contraseña ya que deben coincidir -->
+            <label for="confirm_password">Confirmar contraseña</label>
+            <input type="password" id="confirm_password" name="user_confirm_password" pattern="[A-Za-z0-9]{4,8}">
+            <div id="confirm_password-error" class="error-confirm_password"></div>
+            <img id="rojo-icon-confirm_password" src="imagenes/rojo-icon.png" alt="Icono de verificación">
+            <img id="verde-icon-confirm_password" src="imagenes/verde-icon.png" alt="Icono de verificación">
+            <br><br>
+            
+            <!-- Boton para envio de los datos y llamada a la funcion para validar formulario cuando clique boton -->
+            <input type="submit" value="ENVIAR" onclick="validateForm(event)">
+        </form>
+
+        <!-- Añadir la ruta a la hoja de JS -->
+        <script src="index2.js"></script>
+    
+    </body>
+
+</html>
